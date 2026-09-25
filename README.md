@@ -6,6 +6,11 @@ Configuration files for using the **M-VAVE SMC-PAD** (16-pad wireless MIDI pad c
 
 ---
 
+## TODO
+1. Add 2 Decks Devices.xml.
+2. Add Mappers.xml.
+3. Add docs to describe the mapper.
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
