@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device name="SMC-PAD" author="Zhrepot" description="M-VAVE SMC-PAD" version="800" type="MIDI" decks="4" vid="0x4353" pid="0x4B4D" drivername="SMC-PAD">
+
+  <!-- ===================== Pads : Button trigger (CH10) ===================== -->
+  <!-- Deck 1/3 -->
+  <button note="0x30" name="PAD1"  channel="9" deck="1" />
+  <button note="0x31" name="PAD2"  channel="9" deck="1" />
+  <button note="0x32" name="PAD3"  channel="9" deck="1" />
+  <button note="0x33" name="PAD4"  channel="9" deck="1" />
+  <button note="0x2C" name="PAD5"  channel="9" deck="1" />
+  <button note="0x2D" name="PAD6"  channel="9" deck="1" />
+  <button note="0x2E" name="PAD7"  channel="9" deck="1" />
+  <button note="0x2F" name="PAD8"  channel="9" deck="1" />
+  <!-- Deck 2/4 -->
+  <button note="0x28" name="PAD9"  channel="9" deck="2" />
+  <button note="0x29" name="PAD10" channel="9" deck="2" />
+  <button note="0x2A" name="PAD11" channel="9" deck="2" />
+  <button note="0x2B" name="PAD12" channel="9" deck="2" />
+  <button note="0x24" name="PAD13" channel="9" deck="2" />
+  <button note="0x25" name="PAD14" channel="9" deck="2" />
+  <button note="0x26" name="PAD15" channel="9" deck="2" />
+  <button note="0x27" name="PAD16" channel="9" deck="2" />
+
+  <!-- ===================== Pads : Velocity sliders (CH10) ===================== -->
+  <!-- Deck 1/3 -->
+  <slider note="0x30" name="PAD1_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x31" name="PAD2_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x32" name="PAD3_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x33" name="PAD4_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x2C" name="PAD5_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x2D" name="PAD6_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x2E" name="PAD7_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <slider note="0x2F" name="PAD8_VEL"  channel="9" deck="1" nozero="yes" ghost="no" />
+  <!-- Deck 2/4 -->
+  <slider note="0x28" name="PAD9_VEL"  channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x29" name="PAD10_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x2A" name="PAD11_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x2B" name="PAD12_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x24" name="PAD13_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x25" name="PAD14_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x26" name="PAD15_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+  <slider note="0x27" name="PAD16_VEL" channel="9" deck="2" nozero="yes" ghost="no" />
+
+  <!-- ===================== Knobs : Relative encoders (CH1) ===================== -->
+  <!-- Deck 1/3 -->
+  <encoder cc="0x24" zero="0" name="KNOB1" channel="0" deck="1" />
+  <encoder cc="0x22" zero="0" name="KNOB2" channel="0" deck="1" />
+  <encoder cc="0x20" zero="0" name="KNOB3" channel="0" deck="1" />
+  <encoder cc="0x1E" zero="0" name="KNOB4" channel="0" deck="1" />
+  <!-- Deck 2/4 -->
+  <encoder cc="0x25" zero="0" name="KNOB5" channel="0" deck="2" />
+  <encoder cc="0x23" zero="0" name="KNOB6" channel="0" deck="2" />
+  <encoder cc="0x21" zero="0" name="KNOB7" channel="0" deck="2" />
+  <encoder cc="0x1F" zero="0" name="KNOB8" channel="0" deck="2" />
+
+  <!-- ===================== Buttons : CC Push (CH1) ===================== -->
+  <button cc="0x19" value="0x7F" off="0x00" name="LEFT"   channel="0" deck="1" />
+  <button cc="0x1A" value="0x7F" off="0x00" name="RIGHT"  channel="0" deck="1" />
+  <button cc="0x1B" value="0x7F" off="0x00" name="PLAY"   channel="0" deck="1" />
+  <button cc="0x1C" value="0x7F" off="0x00" name="STOP"   channel="0" deck="1" />
+  <button cc="0x1D" value="0x7F" off="0x00" name="RECORD" channel="0" deck="1" />
+
+</device>
