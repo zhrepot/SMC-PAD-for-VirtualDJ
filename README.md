@@ -12,6 +12,8 @@ Configuration files for using the **M-VAVE SMC-PAD** (16-pad wireless MIDI pad c
 3. Add docs to describe the mapper.
 4. ...
 
+---
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
@@ -49,7 +51,7 @@ VirtualDJ uses two kinds of XML files:
 | **Device definition** | `Documents\VirtualDJ\Devices\` | Defines the hardware elements (pads, encoders, buttons) and how the controller is detected (VID/PID). |
 | **Mapper** | `Documents\VirtualDJ\Mappers\` | Maps the defined elements to VDJ actions. |
 
-This project is based on the SMC-PAD **default preset** (slots 3–8 of its 8 preset slots).
+This project is based on the SMC-PAD **default preset** (slots 3–8 of its 8 preset slots), with **one required change**: the encoders' type is set to **`CW` (relative)** instead of the factory-default `CC` (absolute). Because the encoders are physically **endless** (no end stops), the relative `CW` type is the correct match — the default absolute `CC` type would wrap/jump the value.
 
 **MIDI layout used (default preset):**
 
@@ -75,7 +77,13 @@ This project is based on the SMC-PAD **default preset** (slots 3–8 of its 8 pr
 1. **Device definition** — from `devices/`, pick one based on your preferred deck layout (e.g. `decks4` = 2 sides × 2 layers, `decks2` = 2 decks). See `devices/README.md`.
 2. **Mapper** — from `mappers/<same-layout>/`, pick one based on your preferred button/function layout. Each mapper folder has its own README describing the button layout.
 
-### 3.2 Install
+### 3.2 Prepare the device (required)
+
+1. Install the official **MidiSuite** software and connect the SMC-PAD.
+2. For each of the **8 encoders**, set **Type = `CW`** (relative). Keep the Channel / Curve / CC number unchanged.
+   - The factory default type is `CC` (absolute), which does not match the endless knobs; this project requires `CW`.
+
+### 3.3 Install
 
 1. Copy the chosen **Device** XML into:
    ```
