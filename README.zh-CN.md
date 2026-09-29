@@ -43,7 +43,7 @@ VirtualDJ 使用两类 XML 文件：
 | **Device 定义** | `Documents\VirtualDJ\Devices\` | 定义硬件元素（打击垫、编码器、按钮）及设备识别方式（VID/PID）。 |
 | **Mapper 映射** | `Documents\VirtualDJ\Mappers\` | 把定义的元素映射到 VDJ 动作。 |
 
-本项目基于 SMC-PAD 的 **默认预设**（8 个预设槽位中的槽位 3–8）。
+本项目基于 SMC-PAD 的 **默认预设**（8 个预设槽位中的槽位 3–8），并做了一处**必要修改**：编码器的 Type 由出厂默认的 `CC`（绝对式）改为 **`CW`（相对式）**。因为编码器在物理上是**无极**（没有限位）的，相对式 `CW` 才是正确匹配；默认的绝对式 `CC` 会造成数值回绕/跳变。
 
 **所用 MIDI 布局（默认预设）：**
 
@@ -69,7 +69,13 @@ VirtualDJ 使用两类 XML 文件：
 1. **Device 定义** —— 在 `devices/` 中根据你偏好的 deck 布局选择（如 `decks4` = 双面双层，`decks2` = 双 deck）。详见 `devices/README.md`。
 2. **Mapper 映射** —— 在 `mappers/<相同布局>/` 中根据你偏好的按键功能布局选择。每个 mapper 文件夹内都有各自的 README 说明按键功能布局。
 
-### 3.2 使用
+### 3.2 准备设备（必需）
+
+1. 安装官方 **MidiSuite** 软件并连接 SMC-PAD。
+2. 把 **8 个编码器**的 **Type 均改为 `CW`**（相对式），Channel / Curve / CC 编号保持不变。
+   - 出厂默认是 `CC`（绝对式），与无极旋钮不匹配；本项目要求改为 `CW`。
+
+### 3.3 使用
 
 1. 把选定的 **Device** XML 复制到：
    ```
